@@ -46,7 +46,7 @@ try:
     # # partial update
     
     logging.info("Goto Sleep...")
-    epd.sleep()
+    #epd.sleep()
         
 except IOError as e:
     logging.info(e)
