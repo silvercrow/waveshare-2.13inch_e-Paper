@@ -24,6 +24,7 @@ try:
     epd.Clear(0xFF)
     
     # Drawing on the image
+    font24 = ImageFont.truetype(os.path.join(picdir, 'Poppins-SemiBold.ttf'), 24)
     font38 = ImageFont.truetype(os.path.join(picdir, 'Poppins-SemiBold.ttf'), 38)
     font24 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 24)
     
@@ -34,6 +35,7 @@ try:
 
     draw.text((10, 10), 'David Balan', font = font38, fill = 0)
     draw.text((70, 50), u'デビッド', font = font24, fill = 0)
+    draw.text((90, 10), 'The quick brown fox', font = font24, fill = 0)
     epd.display(epd.getbuffer(image))
     time.sleep(2)
     
