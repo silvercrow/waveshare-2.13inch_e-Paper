@@ -35,7 +35,7 @@ try:
 
     draw.text((10, 10), 'David Balan', font = font38, fill = 0)
     draw.text((70, 50), u'デビッド', font = font24, fill = 0)
-    draw.text((10, 70), 'The quick brown fox', font = font24, fill = 0)
+    draw.text((10, 80), 'The quick brown fox', font = font24, fill = 0)
     epd.display(epd.getbuffer(image))
     time.sleep(2)
     
