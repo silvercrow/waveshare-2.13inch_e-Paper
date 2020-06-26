@@ -24,26 +24,24 @@ try:
     epd.Clear(0xFF)
     
     # Drawing on the image
-    font24 = ImageFont.truetype(os.path.join(picdir, 'Poppins-SemiBold.ttf'), 24)
-    font38 = ImageFont.truetype(os.path.join(picdir, 'Poppins-SemiBold.ttf'), 38)
-    font24 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 24)
+    #font24 = ImageFont.truetype(os.path.join(picdir, 'Poppins-SemiBold.ttf'), 24)
+    #font38 = ImageFont.truetype(os.path.join(picdir, 'Poppins-SemiBold.ttf'), 38)
+    #font24 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 24)
     
-    logging.info("1.Drawing on the image...")
-    image = Image.new('1', (epd.height, epd.width), 255)  # 255: clear the frame    
-    draw = ImageDraw.Draw(image)
-    
-
-    draw.text((10, 10), 'David Balan', font = font38, fill = 0)
-    draw.text((70, 50), u'デビッド', font = font24, fill = 0)
-    draw.text((10, 80), 'The quick brown fox', font = font24, fill = 0)
-    epd.display(epd.getbuffer(image))
-    time.sleep(2)
+    #logging.info("1.Drawing on the image...")
+    #image = Image.new('1', (epd.height, epd.width), 255)  # 255: clear the frame    
+    #draw = ImageDraw.Draw(image)
+    #draw.text((10, 10), 'David Balan', font = font38, fill = 0)
+    #draw.text((70, 50), u'デビッド', font = font24, fill = 0)
+    #draw.text((10, 80), 'The quick brown fox', font = font24, fill = 0)
+    #epd.display(epd.getbuffer(image))
+    #time.sleep(2)
     
     # read bmp file 
-    #logging.info("2.read bmp file...")
-    #image = Image.open(os.path.join(picdir, '2in13.bmp'))
-    #epd.display(epd.getbuffer(image))
-   # time.sleep(2)
+    logging.info("reading image file...")
+    image = Image.open(os.path.join(picdir, 'fox.jpg'))
+    epd.display(epd.getbuffer(image))
+    time.sleep(2)
         
     # # partial update
     
